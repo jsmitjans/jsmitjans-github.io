@@ -277,6 +277,22 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product" style="position: absolute;">
+                        <div class="portfolio-content h-100">
+                            <video id="videoWsp" controls src="assets/video/envio_wsp.mp4" poster="assets/video/poster/wsp.jpg" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; background-color: black;"></video>
+                            <div class="dv-texto-video">
+                                API Rest Twilio-WhatsApp
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product" style="position: absolute;">
+                        <div class="portfolio-content h-100">
+                            <video id="videoDocumento" controls src="assets/video/generacion_protocolo.mp4" poster="assets/video/poster/generacion_documento.jpg" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; background-color: black;"></video>
+                            <div class="dv-texto-video">
+                                Personalización de Documento
+                            </div>
+                        </div>
+                    </div>
                 </div><!-- End Portfolio Item -->
 
 
@@ -318,6 +334,22 @@
     });
     document.addEventListener("DOMContentLoaded", function () {
         const video = document.getElementById("videoCarga");
+        const texto = video.parentElement.querySelector(".dv-texto-video");
+
+        video.addEventListener("play", function () {
+            texto.style.display = "none";
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        const video = document.getElementById("videoWsp");
+        const texto = video.parentElement.querySelector(".dv-texto-video");
+
+        video.addEventListener("play", function () {
+            texto.style.display = "none";
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        const video = document.getElementById("videoDocumento");
         const texto = video.parentElement.querySelector(".dv-texto-video");
 
         video.addEventListener("play", function () {
