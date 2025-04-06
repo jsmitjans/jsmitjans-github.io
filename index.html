@@ -79,19 +79,6 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" style="position: absolute;">
                         <div class="portfolio-content h-100">
-                            <img src="assets/img/proyectos/formulario_encuesta.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Módulo de creación encuestas</h4>
-                                <p>RRHH3D</p>
-                                <div>
-                                    <a href="assets/img/proyectos/formulario_encuesta_ampliado.png" title="Ampliar imagen" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" title="Detalles del sistema" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" style="position: absolute;">
-                        <div class="portfolio-content h-100">
                             <img src="assets/img/proyectos/induccion_home.png" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>Sistemas de Inducción</h4>
@@ -282,6 +269,14 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product" style="position: absolute;">
+                        <div class="portfolio-content h-100">
+                            <video id="videoCarga" controls src="assets/video/video_carga_inteligente.mp4" poster="assets/video/poster/carga_inteligente.jpg" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; background-color: black;"></video>
+                            <div class="dv-texto-video">
+                                Carga Masiva Inteligente
+                            </div>
+                        </div>
+                    </div>
                 </div><!-- End Portfolio Item -->
 
 
@@ -315,6 +310,14 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const video = document.getElementById("videoEncuesta");
+        const texto = video.parentElement.querySelector(".dv-texto-video");
+
+        video.addEventListener("play", function () {
+            texto.style.display = "none";
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        const video = document.getElementById("videoCarga");
         const texto = video.parentElement.querySelector(".dv-texto-video");
 
         video.addEventListener("play", function () {
